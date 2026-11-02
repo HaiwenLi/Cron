@@ -1,0 +1,6 @@
+# Copy to config.local.yaml (gitignored) and fill WORKSPACE for this machine.
+max_concurrent: 2
+retention_days: 14
+variables:
+  WORKSPACE: ""
+  PYTHON: "python"

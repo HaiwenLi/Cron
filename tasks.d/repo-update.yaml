@@ -1,0 +1,17 @@
+id: repo-update
+name: Update git repositories under WORKSPACE
+enabled: false
+schedule: "0 20 * * *"
+miss_policy: coalesce
+executor: opencode
+permission: auto
+timeout: 3600
+workdir: ${WORKSPACE}
+steps:
+  - name: update
+    type: prompt
+    run: |
+      Pull latest changes for the git repositories under ${WORKSPACE}
+      (skip dirty or rebasing ones). Write a short per-repo summary
+      (old HEAD -> new HEAD, notable changes) to ${RUN_DIR}/report.md.
+      Do not force anything; read-only operations only.

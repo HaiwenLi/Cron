@@ -1,0 +1,10 @@
+id: example-echo
+name: Echo smoke test (safe, no-op)
+enabled: false            # enable temporarily for acceptance, disable after
+schedule: "*/5 * * * *"
+miss_policy: coalesce
+executor: script
+steps:
+  - name: echo
+    type: script
+    run: ${PYTHON} -c "print('cron ok')"

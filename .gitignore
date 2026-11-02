@@ -1,0 +1,31 @@
+# ===== SDD execution workspace =====
+.superpowers/
+
+# ===== Machine-local / secrets (never commit) =====
+*.local.*
+*.local/
+secrets/
+.env
+.env.*
+
+# ===== Execution artifacts =====
+logs/
+*.log
+runs/
+state/
+__pycache__/
+*.pyc
+.venv/
+
+# ===== Legacy toy prototype (2026-06) — pending scrub-or-drop decision =====
+# (anchored to repo root so they don't swallow new paths like docs/plans/)
+/cron_manager/
+/plans/
+/scripts/
+/chronicle-research.md
+/INDEX.md
+/session-context-cron-habit.md
+
+# ===== OS / editor noise =====
+Thumbs.db
+.DS_Store

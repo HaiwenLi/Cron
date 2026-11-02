@@ -1,0 +1,5 @@
+max_concurrent: 2
+retention_days: 14
+variables:
+  WORKSPACE: ""     # override in config.local.yaml (never commit real paths)
+  PYTHON: "python"
